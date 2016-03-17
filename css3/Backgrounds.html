@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #example1 {
+                background-image: url(img_flwr.gif), url(paper.gif);
+                background-position: right bottom, left top;
+                background-repeat: no-repeat, repeat;
+                padding: 15px;
+            }
+
+            #example2 {
+                background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+                padding: 15px;
+            }
+
+            #example3 {
+                border: 1px solid black;
+                height: 150px;
+                width: 180px;
+                background: url(img_flwr.gif);
+                background-size: 100px 80px;
+                background-repeat: no-repeat;
+                padding: 15px;
+            }
+
+            #example4 {
+                border: 1px solid black;
+                height: 300px;
+                width: 300px;
+                background: url(img_flwr.gif);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            #example5 {
+                border: 1px solid black;
+                height: 300px;
+                width: 300px;
+                background: url(img_flwr.gif);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            #example6 {
+                background: url(img_flwr.gif) left top no-repeat, url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+                padding: 15px;
+                background-size: 50px, 130px, auto;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <h1>Backgrounds</h1>
+
+        <hr/>
+
+        <h2>Backgrounds 관련 속성</h2>
+        <p>
+            CSS3 에서는 엘리먼트의 배경을 좀 더 넓게 제어 할 수 있는 몇몇의 백그라운드 프로퍼티들을 가지고 있다.<br/>
+            하나의 엘리먼트에 여러개의 배경 이미지를 넣을 수 있는 속성과 함께 아래의 속성들도 함께 소개한다.
+            <ul>
+                <li>
+                    background-size
+                </li>
+                <li>
+                    background-origin
+                </li>
+                <li>
+                    background-clip
+                </li>
+            </ul>
+        </p>
+
+        <hr/>
+
+        <h2>CSS3 Multiple Backgrounds</h2>
+        <p>
+            background-image 속성를 사용하면 하나의 엘리먼트에 여러개에 배경 이미지를 넣을 수 있다.<br/>
+            각각의 이미지를 콤마로 구분된다.
+        </p>
+        <p>
+            <h3>예제</h3>
+            <p>
+                background-image: url(img_flwr.gif), url(paper.gif);
+            </p>
+            <p>
+                background-position: right bottom, left top;
+            </p>
+            <p>
+                background-repeat: no-repeat, repeat;
+            </p>
+            <div id="example1">
+                <h1>Lorem Ipsum Dolor</h1>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </p>
+        <p>
+            <h3>짧게 쓰는 예제</h3>
+            <p>
+                background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+            </p>
+            <div id="example2">
+                <h1>Lorem Ipsum Dolor</h1>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </p>
+
+        <hr/>
+
+        <h2>CSS3 Background Size</h2>
+        <p>
+            background-size 는 배경 이미지의 크기를 지정하는 속성이다. CSS3 이전에는 배경 이미지의 크기는 실제 이미지의 크기 였다. CSS3 에서는 배경 이미지의 크기를 재지정 할 수 있다. 길이, 퍼센트로 지정이 가능하고 contain, cover 로 지정 할 수도 있다.
+        </p>
+        <div id="example3">
+            <h1>Lorem Ipsum Dolor</h1>
+        </div>
+        <div id="example4">
+            <h1>Lorem Ipsum Dolor</h1>
+        </div>
+        <div id="example5">
+            <h1>Lorem Ipsum Dolor</h1>
+        </div>
+
+        <hr/>
+
+        <h2>Define Sizes of Multiple Background Images</h2>
+        <p>
+            background-size 는 여러개의 배경 이미지의 크기 또한 지정 할 수 있다.
+        </p>
+        <div id="example6">
+            <h1>Lorem Ipsum Dolor</h1>
+        </div>
+
+        <hr/>
+        <h2>Full Size Background Image</h2>
+        <p>
+            브라우저 화면을 항상 배경 이미지로 덮고 싶을 때 사용한다.<br/>
+            이를 위해서는 아래 4가지를 만족해야한다
+            <ul>
+                <li>
+                    페이지를 이미지로 채운다
+                </li>
+                <li>
+                    큰 이미가 필요
+                </li>
+                <li>
+                    이미지를 페이지 가운데 위치 시킴
+                </li>
+                <li>
+                    스크롤바가 생기지 않게 할 것
+                </li>
+            </ul>
+        </p>
+        <a href="http://www.w3schools.com/css/tryit.asp?filename=trycss3_background_full" target="_blank">예제</a>
+
+    </body>
+</html>
