@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="../node_modules/react/dist/react.min.js"></script>
+    <script src="../node_modules/react-dom/dist/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      var Counter = React.createClass({
+        getInitialState() {
+          return {
+            count: 0
+          };
+        },
+        _onClick() {
+          this.setState({
+             count: (this.state.count + 1),
+             date: (new Date()).valueOf()
+          });
+        },
+        render() {
+          return (
+            <div>
+              <div>clicked: {this.state.count}</div>
+              <div>date value: {this.state.date}</div>
+              <button onClick={this._onClick}>click</button>
+            </div>
+          );
+        }
+      });
+
+      ReactDOM.render(
+        <Counter />,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
